@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots Explore - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logodiv"><!--<img src="images/logo.jpeg" alt="Company Logo"> <!-- Replace with your logo --></div>
+            <h1>ROOTS EXPLORE</h1>
+        </div>
+        <nav>
+              <a href="index.html">Feed</a>
+            <a href="market-place.html">Marketplace</a>
+            <a href="book-a-hotel.html">Hotels</a>
+            <a href="book-a-tour.html">Tours</a>
+            <a href="painting.html">Paintings</a>
+            <a href="about.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main id="marketplace">
+        <h2>Marketplace</h2>
+        <div class="products-grid">
+            <div class="product" onclick="openProductDetails('Product 1')">
+                <img src="https://c8.alamy.com/comp/BPF3XT/south-africa-cape-town-typical-south-african-beaded-souvenirs-BPF3XT.jpg" alt="Product 1">
+                <h3>Beaded Souvenirs</h3>
+                <p>Le 100</p>
+            </div>
+            <div class="product" onclick="openProductDetails('Product 2')">
+                <img src="https://media.istockphoto.com/id/1191383976/photo/flea-market.jpg?s=612x612&w=is&k=20&c=gORpnOx2wWUj9L5WBH_Wp6UjG8sUYucHQExMk2_SgcI=" alt="Product 2">
+                <h3>Wooden Souvenirs</h3>
+                <p>LE 300</p>
+            </div>
+            <div class="product" onclick="openProductDetails('Product 3')">
+                <img src="https://c8.alamy.com/comp/2J3K28F/patterned-african-artisan-wood-bowls-at-victoria-and-alfred-waterfront-in-cape-town-cape-town-south-africa-2J3K28F.jpg" alt="Product 3">
+                <h3>Wooden Bowls</h3>
+                <p>Le 200</p>
+            </div>
+            <div class="product" onclick="openProductDetails('Product 4')">
+                <img src="https://media.istockphoto.com/id/1208516522/photo/african-masks-on-a-local-market-in-cape-town-south-africa.jpg?s=612x612&w=0&k=20&c=CdVL5AF4naSshl569BWGtCZZmtGh3np5xn40J_O7PG8=" alt="Product 4">
+                <h3>Masks Art</h3>
+                <p>Le 200</p>
+            </div>
+            <div class="product" onclick="openProductDetails('Product 5')">
+                <img src="https://i.etsystatic.com/14808232/r/il/af4211/4307593929/il_570xN.4307593929_keot.jpg" alt="Product 5">
+                <h3>Paper Earrings</h3>
+                <p>$200</p>
+            </div>
+            <div class="product" onclick="openProductDetails('Product 6')">
+                <img src="https://m.media-amazon.com/images/I/51oilea7ieL._AC_SY1000_.jpg" alt="Product 6">
+                <h3>Jewellery Art </h3>
+                <p>Le 500</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Details Modal -->
+    <div id="product-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProductDetails()">&times;</span>
+            <div class="product-details">
+                <h2 id="product-title">Product Title</h2>
+                <div class="product-gallery">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeWKMZijQi3VjI-waHYuO2OJnvWFFefcS1lw&s" alt="Product Image" id="main-product-image">
+                    <div class="product-thumbnails">
+                        <img src="https://thumbs.dreamstime.com/b/traditional-market-crafts-south-africa-african-tourist-market-market-south-africa-175198528.jpg" alt="Product Thumbnail" onclick="changeProductImage(this.src)">
+                        <img src="https://i.etsystatic.com/16663845/r/il/707fdf/3649346324/il_fullxfull.3649346324_oqk6.jpg" alt="Product Thumbnail" onclick="changeProductImage(this.src)">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRUnvN401CzLgKj0txJFHEbQpJd-BIWhULs6LTjLTxxwHDy6cRcbrIdikXNAZc6GFQXE4&usqp=CAU" alt="Product Thumbnail" onclick="changeProductImage(this.src)">
+                    </div>
+                </div>
+                <p id="product-description"> Our marketplace offers a diverse range of options to satisfy every wanderlust....</p>
+                <p id="product-price">Price: Le 300</p>
+                <button class="buy-btn" onclick="openPaymentOptions()">Buy Now</button>
+                <button class="back-btn" onclick="closeProductDetails()">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Options Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePaymentOptions()">&times;</span>
+            <h3>Select a Payment Method</h3>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Mocha')">Mocha</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Solana')">Solana</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Africell Money')">Africell Money</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Orange Money')">Orange Money</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Roots Explore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

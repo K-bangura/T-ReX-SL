@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(lightseagreen); /* Green to white to blue gradient */
+}
+
+/* Header */
+header {
+    background-color: #004d40; /* Deep teal for the header */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: fixed;
+    width: 99%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+.logodiv {
+    width:100px;
+    height:110px;
+    background-image:url("images/ReX logo42-1.png");
+    /*background-origin: center;*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00796b;
+    transition: background-color 0.3s ease;
+    
+}
+
+header nav a:hover {
+    background-color: #004d40;
+      
+}
+
+/* Stories Section */
+.stories {
+    display: flex;
+  
+    padding: 10px;
+    background-color: #ffffff; /* White background for stories */
+    margin-top: 65px; /* Offset header */
+}
+
+.story {
+    margin-right: 15px;
+    text-align: center;
+
+}
+
+.story img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Feed Section */
+#feed {
+    padding: 20px;
+    background: linear-gradient(green, white, blue); /* Green to white to blue gradient */
+    min-height: 100vh;
+    margin-top: 70px; /* Offset header */
+}
+
+.post {
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 45%; /* Reduced post width */
+    max-width: 700px; /* Maximum width for large screens */
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+
+}
+
+.profile-pic {
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-left: 10px;
+}
+
+.post-image-container {
+    margin-top: 10px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.post-actions {
+    margin-top: 10px;
+}
+
+.post-actions button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-section {
+    margin-top: 10px;
+    display: flex;
+}
+
+.comment-section.visible {
+    display: block;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.comment-submit {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chatbox Modal */
+#chatbox-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    display: none;
+}
+
+#chatbox-modal.chatbox-visible {
+    display: block;
+}
+
+.chatbox-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.chatbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-messages {
+    max-height: 300px;
+    overflow-y: scroll;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.chatbox-messages div {
+    margin-bottom: 10px;
+}
+
+/* Post Creation Modal */
+#post-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    display: none;
+
+}
+
+#post-modal.modal-visible {
+    display: block;
+
+}
+
+/* Plus Button */
+#plus-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00796b;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* Story Modal */
+#story-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    display: none;
+    z-index: 2000;
+
+
+}
+
+#story-modal .story-modal-content {
+    position: relative;
+
+}
+
+#story-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #00796b;
+}
+
+#story-modal h2 {
+    margin: 0;
+    color: #00796b;
+
+
+}
+
+#story-modal p {
+    margin-top: 10px;
+    
+}
+
+
+
+
+#feed {
+    position: relative; /* Ensures proper positioning of child elements */
+}
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+

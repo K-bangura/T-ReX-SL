@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots Explore - Paintings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <div class="logodiv"><!--<img src="images/logo.jpeg" alt="Company Logo"> <!-- Replace with your logo --></div>
+            <h1>ROOTS EXPLORE</h1>
+        </div>
+        <nav>
+             <a href="index.html">Feed</a>
+            <a href="market-place.html">Marketplace</a>
+            <a href="book-a-hotel.html">Hotels</a>
+            <a href="book-a-tour.html">Tours</a>
+            <a href="painting.html">Paintings</a>
+            <a href="about.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main id="paintings">
+        <h2>Paintings</h2>
+        <div class="paintings-grid">
+            <div class="painting" onclick="openPaintingDetails('Painting 1')">
+                <img src="https://vista.today/wp-content/uploads/2021/02/Richmond-Garrick-970x550.jpg" alt="Painting 1">
+                <h3>Richmond Garrick</h3>
+            </div>
+            <div class="painting" onclick="openPaintingDetails('Painting 2')">
+                <img src="https://www.switsalone.com/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-05-at-16.18.27.jpeg" alt="Painting 2">
+                <h3>Sahr Mortatay Songu Mbriwa </h3>
+            </div>
+            <div class="painting" onclick="openPaintingDetails('Painting 3')">
+                <img src="https://bondumaniart.com/sites/default/files/aishatu-2.jpg" alt="Painting 3">
+                <h3>Aishatu Jalloh</h3>
+            </div>
+            <div class="painting" onclick="openPaintingDetails('Painting 4')">
+                <img src="https://salonemessengers.com/wp-content/uploads/2022/12/Meet-Aishatu-Jalloh-Feature.webp" alt="Painting 4">
+                <h3>Aishatu Jalloh</h3>
+            </div>
+            <div class="painting" onclick="openPaintingDetails('Painting 5')">
+                <img src="https://freight.cargo.site/t/original/i/eadd07ffc711e989ac9cc7acff8777fd19fc71cd4c0503431ca92f83ae7112bf/Sierra-Leone-Contemporary-Art--16.jpg" alt="Painting 5">
+                <h3>Gibril Bangura</h3>
+            </div>
+            <div class="painting" onclick="openPaintingDetails('Painting 6')">
+                <img src="https://images.squarespace-cdn.com/content/v1/5cfd2d26b9d3c00001f19ef7/1608724748231-7NWIFB8TCYRR4EKEOXNX/WhatsApp+Image+2020-12-23+at+11.21.05+AM+%283%29.jpeg" alt="Painting 6">
+                <h3>Morrison Jusu</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Painting Details Modal -->
+   <!-- Painting Details Modal -->
+<div id="painting-details-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closePaintingDetails()">&times;</span>
+        <div class="painting-details">
+            <h2 id="painting-title">Painting Title</h2>
+            <div class="painting-gallery">
+                <img src="https://lh4.googleusercontent.com/proxy/apFEpsy4rbmIUh8mxkHwrP4rI_VFUaop_0oqvbUshxDPQe4-3sx3d7Mm9O3ktNi4Jj4zfWW3c3QC5Cv4xjwS1E5ZwYUjcUQOORi1wwGJNEFubZWRihm6btXzV6CEcqgUWH-EYWowpLghfJr2zcG-1lsu4gwzUOetkg" alt="Painting Image" id="main-painting-image">
+                <div class="painting-thumbnails">
+                    <img src="https://www.pierrebamin.com/wp-content/uploads/2013/04/richesofsalone.jpg" alt="Painting Thumbnail" onclick="changePaintingImage(this.src)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCEwzsfIGcpVhMn_9XNdRtpobNYFS86PTITQ&s" alt="Painting Thumbnail" onclick="changePaintingImage(this.src)">
+                    <img src="https://freight.cargo.site/t/original/i/1a8fdb77629f32ff7354742d27ccd1c38c4f2ef063c17967086fd46fb6e34e62/Sierra-Leone-Contemporary-Art--20.jpg" alt="Painting Thumbnail" onclick="changePaintingImage(this.src)">
+                </div>
+            </div>
+            <p id="painting-description">Paintings in Sierra Leone often depict aspects of daily life, spiritual beliefs, and societal norms. Artists draw inspiration from their surroundings, using their work to narrate stories that resonate with the local and global community. The themes in their artwork frequently highlight the importance of community, family, and celebration....</p>
+            <p id="painting-price">Price: Le 500</p>
+            <button class="buy-btn" onclick="openPaymentOptions()">Buy Now</button>
+            <button class="connect-artist-btn" onclick="openConnectArtist()">Connect with Artist</button>
+            <button class="back-btn" onclick="closePaintingDetails()">Go Back</button>
+        </div>
+    </div>
+</div>
+
+<!-- Connect with Artist Modal -->
+<div id="connect-artist-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeConnectArtist()">&times;</span>
+        <h3>Connect with Artist</h3>
+        <p>Request a custom portrait or ask any questions you might have.</p>
+        <form id="connect-artist-form">
+            <label for="user-name">Your Name:</label>
+            <input type="text" id="user-name" required>
+            <label for="user-email">Your Email:</label>
+            <input type="email" id="user-email" required>
+            <label for="user-message">Message:</label>
+            <textarea id="user-message" rows="4" required></textarea>
+            <button type="submit" class="send-request-btn">Send Request</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Payment Options Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePaymentOptions()">&times;</span>
+            <h3>Select a Payment Method</h3>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Mocha')">Mocha</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Solana')">Solana</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Africell Money')">Africell Money</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Orange Money')">Orange Money</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Roots Explore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

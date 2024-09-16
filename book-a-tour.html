@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots Explore - Tour Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <div class="logodiv"><!--<img src="images/logo.jpeg" alt="Company Logo"> <!-- Replace with your logo --></div>
+            <h1>ROOTS EXPLORE</h1>
+        </div>
+        <nav>
+              <a href="index.html">Feed</a>
+            <a href="market-place.html">Marketplace</a>
+            <a href="book-a-hotel.html">Hotels</a>
+            <a href="book-a-tour.html">Tours</a>
+            <a href="painting.html">Paintings</a>
+            <a href="about.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main id="tours">
+        <h2>Tour Booking</h2>
+        <div class="tours-grid">
+            <div class="tour" onclick="openTourDetails('Tour 1')">
+                <img src="https://www.bigworldsmallpockets.com/wp-content/uploads/2023/03/Sierra-Leone-Tacugama-Sanctuary-Entrance.jpg" alt="Tour 1">
+                <h3>Tacugama Chimpanzee Sanctuary Tour</h3>
+                <p>A Haven for Primates. For those with a passion for wildlife conservation, the Tacugama Chimpanzee Sanctuary is a must-visit ....</p>
+            </div>
+            <div class="tour" onclick="openTourDetails('Tour 2')">
+                <img src="https://www.melbtravel.com/wp-content/uploads/2023/03/Sierra-Leone-National-Museum-Sierra-Freetown.jpg" alt="Tour 2">
+                <h3>Sierra Leone National Museum Tour</h3>
+                <p>Visit the National Museum to learn about the rich history and culture of the Sierra Leone people. It is located at the junction of Pademba Road and Siaka ....</p>
+            </div>
+            <div class="tour" onclick="openTourDetails('Tour 3')">
+                <img src="https://i0.wp.com/www.thesierraleonetelegraph.com/wp-content/uploads/2019/07/Sierra-Leone-railway-2.jpg?resize=678%2C373&ssl=1" alt="Tour 3">
+                <h3> National Railway Tour</h3>
+                <p>Visit the National Railway Museum. Train lovers visiting Freetown will love to travel back in time at the National Railway Museum. .</p>
+            </div>
+            <div class="tour" onclick="openTourDetails('Tour 4')">
+                <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/thenational/UPUMYHNSFJOTYUR5ETHEM7L3FE.jpg" alt="Tour 4">
+                <h3> Banana Island Tour</h3>
+                <p>A mountain hiking adventure. The Banana Islands are a group of islands that lie off the coast of Yawri Bay, south west of the Freetown Peninsula in the Western Area of Sierra Leone. Three islands make up the Banana Islands: Dublin and Ricketts are linked by a stone causeway.</p>
+            </div>
+            <div class="tour" onclick="openTourDetails('Tour 5')">
+                <img src="https://www.vumbuaafrica.com/wp/wp-content/uploads/2023/03/Tour-Sierra-Leone-Gallery5.jpg" alt="Tour 5">
+                <h3>Tiwai Island Wildlife Sanctuary Tour</h3>
+                <p>Tiwai Island Wildlife Sanctuary: An Ecological Eden in Sierra Leone. Tiwai Island is a sanctuary of natural wonder, showcasing the incredible biodiversity ....</p>
+            </div>
+            <div class="tour" onclick="openTourDetails('Tour 6')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtej4J3uJPSDd6y2MxxhWh7v0bZt8c2z6hag&s" alt="Tour 6">
+                <h3>Bureh Beach Tour</h3>
+                <p>Bureh Beach. A favourite of surfers ever since the 1990s, Bureh beach is a 4 km crescent of golden sand surrounded by forest and with great waves.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Tour Details Modal -->
+    <div id="tour-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTourDetails()">&times;</span>
+            <div class="tour-details">
+                <h2 id="tour-title">Tour Title</h2>
+                <div class="tour-gallery">
+                    <img src="https://i0.wp.com/www.thesierraleonetelegraph.com/wp-content/uploads/2019/02/The-place-resort-in-Tokeh.jpg?resize=678%2C381&ssl=1" alt="Tour Image" id="main-tour-image">
+                    <div class="tour-thumbnails">
+                        <img src="https://sierraloaded.sl/wp-content/uploads/2022/11/Tokeh-Beach.jpg" alt="Tour Thumbnail" onclick="changeTourImage(this.src)">
+                        <img src="https://eb3k7ewioxo.exactdn.com/wp-content/uploads/2021/11/Tacugama.jpg?strip=all&lossy=1&ssl=1" alt="Tour Thumbnail" onclick="changeTourImage(this.src)">
+                        <img src="https://www.switsalone.com/wp-content/uploads/2024/04/5Freetown-Cottontree-Visit-Tourism-SierraLeone.jpg" alt="Tour Thumbnail" onclick="changeTourImage(this.src)">
+                    </div>
+                </div>
+                <p id="tour-description">Embark on a journey of discovery with our curated tourism tours in Sierra Leone, a country rich in history, stunning landscapes, and vibrant cultures. From pristine beaches to lush rainforests, and from historical sites to bustling markets, our tours provide an immersive experience that showcases the unique charm and beauty of this West African gem....</p>
+                <p id="tour-price">Price: $100</p>
+                <button class="book-btn" onclick="openBookingOptions()">Book Now</button>
+                <button class="back-btn" onclick="closeTourDetails()">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Options Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBookingOptions()">&times;</span>
+            <h3>Select a Payment Method</h3>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Mocha')">Mocha</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Solana')">Solana</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Africell Money')">Africell Money</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Orange Money')">Orange Money</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Roots Explore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

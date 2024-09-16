@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots Explore - Hotel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <div class="logodiv"><!--<img src="images/logo.jpeg" alt="Company Logo"> <!-- Replace with your logo --></div>
+            <h1>ROOTS EXPLORE</h1>
+        </div>
+        <nav>
+             <a href="index.html">Feed</a>
+            <a href="market-place.html">Marketplace</a>
+            <a href="book-a-hotel.html">Hotels</a>
+            <a href="book-a-tour.html">Tours</a>
+            <a href="painting.html">Paintings</a>
+            <a href="about.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main id="hotels">
+        <h2>Hotel Booking</h2>
+        <div class="hotels-grid">
+            <div class="hotel" onclick="openHotelDetails('Hotel 1')">
+                <img src="https://z.cdrst.com/foto/hotel-sf/3d900b/granderesp/foto-hotel-105e9ff3.jpg" alt="Hotel 1">
+                <h3>The Lead Hotel</h3>
+                <p>Located in the heart of the city, with luxury rooms and services.</p>
+            </div>
+            <div class="hotel" onclick="openHotelDetails('Hotel 2')">
+                <img src="https://www.visitsierraleone.org/wp-content/uploads/2021/09/sierra-palms-resort-83-1520603060-1.jpg" alt="Hotel 2">
+                <h3>Radisson Blu Hotel</h3>
+                <p>A beachfront property offering serene ocean views and comfort.</p>
+            </div>
+            <div class="hotel" onclick="openHotelDetails('Hotel 3')">
+                <img src="https://fambul.com/uploads/community/profile_images/16137777803086517.png" alt="Hotel 3">
+                <h3>Bintumani Hotel</h3>
+                <p>Perfect for business trips, The Bintumani is a very large Chinese-run hotel in the Aberdeen suburb of Freetown..</p>
+            </div>
+            <div class="hotel" onclick="openHotelDetails('Hotel 4')">
+                <img src="https://images.trvl-media.com/lodging/8000000/7490000/7484200/7484133/f1187969.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Hotel 4">
+                <h3>Country Lodge Hotel</h3>
+                <p>A family-friendly hotel with spacious rooms and entertainment.</p>
+            </div>
+            <div class="hotel" onclick="openHotelDetails('Hotel 5')">
+                <img src="https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_600,q_auto,w_600//hotelier-images/8d/e3/b8d6e09a74d15e73b1c8d92d40a766d12ec7e100450f9fc8d88853e87c61.jpeg" alt="Hotel 5">
+                <h3>Lungi Airport Hotel</h3>
+                <p>Luxury suites with an indoor pool and spa facilities.</p>
+            </div>
+            <div class="hotel" onclick="openHotelDetails('Hotel 6')">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/134989071.jpg?k=b364e7e7ecbe035d3bc76392a68130645a9f42283fe30ad5da53d460d3a2d193&o=&hp=1" alt="Hotel 6">
+                <h3>Sierra Palm Hotel</h3>
+                <p>A budget hotel offering comfort and affordability in the city.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Hotel Details Modal -->
+    <div id="hotel-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeHotelDetails()">&times;</span>
+            <div class="hotel-details">
+                <h2 id="hotel-title">Hotel Title</h2>
+                <div class="hotel-gallery">
+                    <img src="https://images.luxuryescapes.com/q_auto:eco/qxmptprjtq27b6kazupb" alt="Hotel Image" id="main-hotel-image">
+                    <div class="hotel-thumbnails">
+                        <img src="https://images.trvl-media.com/lodging/89000000/88630000/88629600/88629590/b3df821f.jpg?impolicy=fcrop&w=357&h=201&p=1&q=medium" alt="Hotel Thumbnail" onclick="changeHotelImage(this.src)">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/251648504.jpg?k=2806fe895e8fcfc0aa0b51640f7cedee8523774e4140d943e0bd6d4a88bc9c84&o=&hp=1" alt="Hotel Thumbnail" onclick="changeHotelImage(this.src)">
+                        <img src="https://www.momondo.com/himg/ec/ae/4a/expediav2-4053868-a6bb1b-347507.jpg" alt="Hotel Thumbnail" onclick="changeHotelImage(this.src)">
+                    </div>
+                </div>
+                <p id="hotel-description">Welcome to Sierra Leone, a gem on the West African coast known for its stunning landscapes, rich culture, and welcoming people. Our selection of tourism hotels in Sierra Leone offers travelers a variety of accommodation options, combining comfort, convenience, and local charm to ensure an unforgettable stay....</p>
+                <p id="hotel-price">Price per night: $150</p>
+                <button class="book-btn" onclick="openBookingOptions()">Book Now</button>
+                <button class="back-btn" onclick="closeHotelDetails()">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Options Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBookingOptions()">&times;</span>
+            <h3>Select a Payment Method</h3>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Mocha')">Mocha</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Solana')">Solana</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Africell Money')">Africell Money</button>
+            <button class="payment-option" onclick="paymentUnderDevelopment('Orange Money')">Orange Money</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Roots Explore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

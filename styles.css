@@ -1,0 +1,621 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient( green, white, blue);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+}
+.logodiv {
+    width:100px;
+    height:110px;
+    background-image:url("images/ReX logo42-1.png");
+    /*background-origin: center;*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav a:hover {
+    background-color: #004d40;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.product-details img {
+    max-width: 20%;
+    border-radius: 10px;
+}
+
+.product-thumbnails img {
+    margin: 10px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.product-thumbnails img:hover {
+    border: 2px solid #00bfae;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bfae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #008b75;
+}
+
+.payment-option {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00796b;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+}
+
+
+
+.hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hotel {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hotel img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hotel-details img {
+    max-width: 20%;
+    border-radius: 10px;
+}
+
+.hotel-thumbnails img {
+    margin: 10px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.hotel-thumbnails img:hover {
+    border: 2px solid #00bfae;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bfae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #008b75;
+}
+
+.payment-option {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00796b;
+}
+
+
+
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tour {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tour img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tour-details img {
+    max-width: 20%;
+    border-radius: 10px;
+}
+
+.tour-thumbnails img {
+    margin: 10px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.tour-thumbnails img:hover {
+    border: 2px solid #00bfae;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bfae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #008b75;
+}
+
+.payment-option {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00796b;
+}
+
+
+
+
+
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.painting {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.painting img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.painting-details img {
+    max-width: 20%;
+    border-radius: 10px;
+}
+
+.painting-thumbnails img {
+    margin: 10px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.painting-thumbnails img:hover {
+    border: 2px solid #00bfae;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bfae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #008b75;
+}
+
+.payment-option {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00796b;
+}
+/* Connect with Artist Modal */
+#connect-artist-modal {
+    display: none;
+}
+
+#connect-artist-modal .modal-content {
+    width: 50%;
+}
+
+#connect-artist-modal h3 {
+    margin-top: 0;
+}
+
+#connect-artist-modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#connect-artist-modal label {
+    margin: 10px 0 5px;
+}
+
+#connect-artist-modal input, 
+#connect-artist-modal textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#connect-artist-modal .send-request-btn {
+    background-color: #00796b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#connect-artist-modal .send-request-btn:hover {
+    background-color: #004d40;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-us {
+    background: linear-gradient(to right, #004d40, #009688, #4caf50); /* Green, white, and blue background */
+    color: white;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004d40;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #004d40; /* Footer color */
+    color: white;
+    padding: 10px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-container ul li {
+    margin: 0 15px;
+}
+
+.footer-container ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.about-us {
+    background: linear-gradient(to right, #004d40, #009688, #4caf50); /* Green, white, and blue background */
+    color: white;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #004d40; /* Footer color */
+    color: white;
+    padding: 10px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-container ul li {
+    margin: 0 15px;
+}
+
+.footer-container ul li a {
+    color: white;
+    text-decoration: none;
+}
